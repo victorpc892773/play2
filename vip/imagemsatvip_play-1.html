@@ -20,6 +20,37 @@
     <meta http-equiv="Content-Language" content="pt-br" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>PL WATCH | IMAGENSAT VIP</title>
+
+<script>
+var domains = "playervipmaster.com";
+var domainList = domains.split(",");
+
+function extractHostname(url) {
+    var hostname = url.indexOf("://") > -1 ? url.split('/')[2].split(':')[0].split('?')[0] : url.split('/')[0];
+    return hostname;
+}
+
+function isInArray(value, array) {
+    return array.indexOf(value) > -1;
+}
+
+if (window.self !== window.top) {
+    var hostname = extractHostname(document.referrer);
+
+    if (!isInArray(hostname, domainList)) {
+        window.location.href = "https://google.com";
+    } else {
+
+
+
+    }
+} else {
+    window.location.replace("https://google.com");
+}
+
+document.oncontextmenu = document.body.oncontextmenu = function() { return false; };
+</script>
+
 <div class="main">
 <button class="meu-botao" onclick="location.reload()">Travou? Clique aqui </button>
     <script src="https://cdn.jsdelivr.net/npm/jquery@latest"></script>
