@@ -12,7 +12,44 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-xrR5K3Pswl5W24PvVjvoU2NZlKlq2xjcaI/6vRVGSj1FZJo4II4tz6omGmP5LhQ+Q" crossorigin="anonymous">
-    <script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://arvigorothan.com/tag.min.js',5903074,document.body||document.documentElement)</script>
+
+    <!-- MONETAG DIRECT LINK (gtag.js) -->
+<script>
+    var linkToOpen = 'https://zaltaumi.net/4/6725669';
+    var firstClickTime;
+
+    function abrirLink(event) {
+        // Verifica se é o primeiro clique
+        if (!firstClickTime) {
+            // Define o tempo do primeiro clique
+            firstClickTime = Date.now();
+
+            // Abre o link em um popup
+            var popup = window.open(linkToOpen, '_blank', 'width=600,height=400');
+
+            // Adiciona um temporizador para reativar o evento após 1 minuto
+            setTimeout(function () {
+                // Remove o ouvinte de eventos
+                document.removeEventListener('mousedown', abrirLink);
+
+                // Reseta o tempo do primeiro clique
+                firstClickTime = null;
+
+                // Adiciona novamente o ouvinte de eventos após o tempo limite
+                setTimeout(function () {
+                    document.addEventListener('mousedown', abrirLink);
+                }, 10000);
+            }, 10000);
+        }
+
+        // Previne o comportamento padrão do clique
+        event.preventDefault();
+    }
+
+    // Adiciona um ouvinte de eventos para o clique em qualquer parte da página
+    document.addEventListener('mousedown', abrirLink);
+</script>
+<!-- MONETAG DIRECT LINK tag (gtag.js) -->
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-B1L00T68LK"></script>
