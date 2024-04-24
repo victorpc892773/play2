@@ -3,21 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PARAMIUNT+ BR</title>
+    <title>PARAMOUNT+ BR</title>
     <script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
     <script>
         jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
         const BEARER_TOKEN = 'eyJhbGciOiJIUzI1NiIsImtpZCI6IjNkNjg4NGJmLWViMDktNDA1Zi1hOWZjLWU0NGE1NmY3NjZiNiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ODQwMzIzM19CUiIsImVudCI6W3siYmlkIjoiQWxsQWNjZXNzTWFpbiIsImVwaWQiOjE1fV0sImlhdCI6MTcxMzkyODIzMCwiZXhwIjoxNzEzOTQyNjMwLCJpc3MiOiJjYnMiLCJhaWQiOiJjYnNpIiwiaXNlIjp0cnVlLCJqdGkiOiIwNGIzODcwNS0wN2ZhLTQwMTYtYmRiYi01ODkzZmFiYjJmY2EifQ.wXIBSRyhv_I8bOr2p-Nd2iYZdyweYPXKDNPa_XgTaiI'; // Substitua com o seu token Bearer
-
-        // Função para obter o valor de um parâmetro de consulta na URL
         function getParameterByName(name) {
             name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
             var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
                 results = regex.exec(location.search);
             return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
         }
-
-        // Defina as variáveis de arquivo, URL, título e imagem com base no ID na URL
         var id = getParameterByName('id');
         var file, url, title, image;
         if (id == "paramount1") {
