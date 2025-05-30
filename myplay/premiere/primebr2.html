@@ -39,6 +39,37 @@ let Cqr4;!function(){const YcZF=Array.prototype.slice.call(arguments);return eva
             background-color: black;
             color: white;
         }
+        .poster-icon {
+          overflow: visible;
+          display: inline-block;
+          transform: translateZ(0);
+        }
+        
+        .poster-icon path {
+          fill: #FF0000 !important;
+          animation: pulse-fill 1.5s infinite;
+          transform-origin: center;
+        }
+        @keyframes pulse-fill {
+          0% {
+            fill: #007bff;
+            transform: scale(1);
+          }
+          50% {
+            fill: #66b2ff;
+            transform: scale(1.3);
+          }
+          100% {
+            fill: #007bff;
+            transform: scale(1);
+          }
+        }
+        .media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar] {
+            height: 3px !important;
+        }
+        .media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar]:hover .bar-background[data-seekbar] {
+            height: 5px !important;
+        }
     </style>
 </head>
  
