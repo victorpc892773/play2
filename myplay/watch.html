@@ -35,8 +35,17 @@
     <link rel="dns-prefetch" href="https://code.jquery.com">
     <meta name="googlebot" content="noindex">
     <script disable-devtool-auto src="//fastly.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js"></script>
-    <title>PLAYER || WATCH</title>
     <script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://paupsoborofoow.net/tag.min.js',5903074,document.body||document.documentElement)</script>
+
+<script>
+  (function () {
+    const tituloParams = new URLSearchParams(window.location.search);
+    const tituloId = tituloParams.get('id');
+    if (tituloId) {
+      document.title = `ID: ${tituloId}`;
+    }
+  })();
+</script>
 
 </head>
 <body style='margin:0' oncontextmenu='return true' onkeydown='return true'>
