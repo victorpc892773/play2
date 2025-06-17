@@ -155,9 +155,40 @@
         #histats-container {
             display: none;
         }
+
+        .warp-botao {
+            font-size: 12px;
+            font-weight: bold;
+            padding: 6px 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1;
+            display: inline-block;
+        }
+        
+        .warp-botao:hover {
+            cursor: pointer;
+            background-color: #000000;
+            color: #FFFFFF;
+            border: 1px solid #FFFFFF;
+        }
+        @media screen and (max-width: 400px) {
+            .warp-botao {
+                top: 10px;
+                right: 10px;
+                font-size: 3vw;
+                padding: 3px 5px;
+            }
+        }
   </style>
 </head>
 <body>
+<button class="warp-botao" onclick="window.open('https://one.one.one.one/pt-BR/', '_blank')">OPÇÃO OFF?<br>INSTALE O APP WARP/1.1.1.1<br>CONECTE E TENTE NOVAMENTE<br>CLIQUE AQUI E BAIXE!</button>
     <div id="loading" class="openhome-btn">
         <div id="loading-text">Aguarde... Carregando Player</div>
     </div>
