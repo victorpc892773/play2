@@ -157,6 +157,7 @@
         }
 
         .warp-botao {
+            all: unset;
             font-size: 12px;
             font-weight: bold;
             padding: 6px 10px;
@@ -167,10 +168,12 @@
             position: fixed;
             top: 10px;
             right: 10px;
-            z-index: 1;
+            z-index: 10000;
             display: inline-block;
+            animation: none !important;
+            transition: none !important;
+            font-family: sans-serif;
         }
-        
         .warp-botao:hover {
             cursor: pointer;
             background-color: #000000;
