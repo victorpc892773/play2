@@ -1,0 +1,24 @@
+<style>
+  #overlayLink {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background: transparent;
+    cursor: pointer;
+  }
+</style>
+
+<div id="overlayLink"></div>
+<script>
+const overlay = document.getElementById('overlayLink');
+
+function abrirLink() {
+  window.open('https://ey43.com/4/8868046', '_blank');
+  overlay.remove();
+}
+overlay.addEventListener('click', abrirLink);
+overlay.addEventListener('touchend', abrirLink);
+</script>
