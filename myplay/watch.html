@@ -33,7 +33,18 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link rel="dns-prefetch" href="https://code.jquery.com">
     <script disable-devtool-auto src="//fastly.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js"></script>
-    <script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://paupsoborofoow.net/tag.min.js',5903074,document.body||document.documentElement)</script>
+
+<div id="overlayLink"></div>
+<script>
+const overlay = document.getElementById('overlayLink');
+
+function abrirLink() {
+  window.open('https://ey43.com/4/8868046', '_blank');
+  overlay.remove();
+}
+overlay.addEventListener('click', abrirLink);
+overlay.addEventListener('touchend', abrirLink);
+</script>
 
 <script>
   (function () {
@@ -62,6 +73,16 @@
         }
   #histats-container {
     display: none;
+  }
+  #overlayLink {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background: transparent;
+    cursor: pointer;
   }
 </style>
   <iframe allow="encrypted-media" src="" id="iframe" name="iframe" frameborder="0" scrolling="no" allowfullscreen></iframe>
