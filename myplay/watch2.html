@@ -48,33 +48,17 @@
     cursor: pointer;
   }
 </style>
+
 <div id="overlayLink"></div>
 <script>
 const overlay = document.getElementById('overlayLink');
-const url = 'https://ey43.com/4/10070092';
 
-// Função para mostrar o overlay novamente
-function mostrarOverlay() {
-  overlay.style.display = 'block';
-  overlay.addEventListener('click', abrirLink);
-  overlay.addEventListener('touchend', abrirLink);
-}
-
-// Função para abrir o link e esconder o overlay
 function abrirLink() {
-  window.open(url, '_blank');
-
-  // Esconde o overlay e remove eventos temporariamente
-  overlay.style.display = 'none';
-  overlay.removeEventListener('click', abrirLink);
-  overlay.removeEventListener('touchend', abrirLink);
-
-  // Após 15 segundos, mostra novamente
-  setTimeout(mostrarOverlay, 15000);
+  window.open('https://ey43.com/4/10070092', '_blank');
+  overlay.remove();
 }
-
-// Ativa pela primeira vez
-mostrarOverlay();
+overlay.addEventListener('click', abrirLink);
+overlay.addEventListener('touchend', abrirLink);
 </script>
 
 <!-- EMB -->
@@ -976,6 +960,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
     })();
 </script>
 </html>
+
 
 
 
