@@ -46,19 +46,35 @@
     z-index: 9999;
     background: transparent;
     cursor: pointer;
+    display: none;
   }
 </style>
 
 <div id="overlayLink"></div>
-<script>
-const overlay = document.getElementById('overlayLink');
 
-function abrirLink() {
-  window.open('https://ey43.com/4/10070092', '_blank');
-  overlay.remove();
-}
-overlay.addEventListener('click', abrirLink);
-overlay.addEventListener('touchend', abrirLink);
+<script>
+(() => {
+  // Tudo dentro deste bloco fica isolado (IIFE)
+  const overlay = document.getElementById('overlayLink');
+  const url = 'https://ey43.com/4/10070092';
+  const intervalo = 15000; // 15 segundos
+
+  function mostrarOverlay() {
+    overlay.style.display = 'block';
+    overlay.addEventListener('click', abrirLink, { once: true });
+    overlay.addEventListener('touchend', abrirLink, { once: true });
+  }
+
+  function abrirLink() {
+    window.open(url, '_blank');
+    overlay.style.display = 'none';
+    // Reexibe após 15 segundos
+    setTimeout(mostrarOverlay, intervalo);
+  }
+
+  // Ativa pela primeira vez
+  mostrarOverlay();
+})();
 </script>
 
 <!-- EMB -->
@@ -960,6 +976,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
     })();
 </script>
 </html>
+
 
 
 
