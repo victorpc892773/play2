@@ -37,7 +37,30 @@
   <title>WATCH | MEUPLAYERONLINE</title>
 
 <!-- MONELINK -->
-<script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://paupsoborofoow.net/tag.min.js',5794464,document.body||document.documentElement)</script>
+<style>
+  #overlayLink {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background: transparent;
+    cursor: pointer;
+  }
+</style>
+
+<div id="overlayLink"></div>
+<script>
+const overlay = document.getElementById('overlayLink');
+
+function abrirLink() {
+  window.open('https://ey43.com/4/10070092', '_blank');
+  overlay.remove();
+}
+overlay.addEventListener('click', abrirLink);
+overlay.addEventListener('touchend', abrirLink);
+</script>
 
 <!-- EMB -->
 <script>
@@ -938,6 +961,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
     })();
 </script>
 </html>
+
 
 
 
