@@ -218,13 +218,28 @@
     </style>
 
     <script>
-        (function () {
-            const tituloParams = new URLSearchParams(window.location.search);
-            const tituloId = tituloParams.get('id');
-            if (tituloId) {
-                document.title = `ID: ${tituloId}`;
-            }
-        })();
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id');
+    
+      if (!id) return;
+    
+      function tryDecodeBase64(str) {
+        if (str.length % 4 !== 0) return null;
+        if (!/^[A-Za-z0-9+/]*={0,2}$/.test(str)) return null;
+    
+        try {
+          const decoded = decodeURIComponent(escape(atob(str)));
+          // Só considera válido se o resultado for diferente do original
+          return decoded !== str ? decoded : null;
+        } catch (e) {
+          return null;
+        }
+      }
+    
+      const decoded = tryDecodeBase64(id);
+      document.title = `ID: ${decoded ?? id}`;
+    })();
     </script>
 </head>
 <body>
