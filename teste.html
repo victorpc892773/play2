@@ -1,0 +1,12 @@
+<script>
+fetch('https://mydshapimaster2.online/api/dsn/debug.php', {
+    method: 'POST',
+    headers: {
+        'Authorization': 'Bearer teste',
+        'Content-Type': 'application/octet-stream',
+    },
+    body: 'teste'
+})
+.then(r => r.json())
+.then(console.log)
+</script>
