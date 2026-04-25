@@ -1,4 +1,3 @@
-<script>
 fetch('https://mydshapimaster2.online/api/dsn/debug.php', {
     method: 'POST',
     headers: {
@@ -9,4 +8,3 @@ fetch('https://mydshapimaster2.online/api/dsn/debug.php', {
 })
 .then(r => r.json())
 .then(console.log)
-</script>
