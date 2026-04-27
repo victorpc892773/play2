@@ -98,23 +98,21 @@
 let popupLoaded = false;
 const overlay = document.getElementById('popup-overlay');
 
-function loadPopupWithReset() {
+function onTouch() {
   if (popupLoaded) return;
   popupLoaded = true;
+  overlay.style.pointerEvents = 'none'; // desativa overlay
+
   window.open("https://crn77.com/4/8868046", "_blank");
 
   setTimeout(() => {
     popupLoaded = false;
-    addListeners();
+    overlay.style.pointerEvents = 'auto'; // reativa overlay
   }, 15000);
 }
 
-function addListeners() {
-  overlay.addEventListener('mousedown', loadPopupWithReset, { once: true });
-  overlay.addEventListener('touchend', loadPopupWithReset, { once: true, passive: true });
-}
-
-addListeners();
+overlay.addEventListener('mousedown', onTouch);
+overlay.addEventListener('touchend', onTouch, { passive: true });
 </script>
 
 <!-- BOTÃO EMBED -->
